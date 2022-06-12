@@ -32,7 +32,7 @@ class GetURLData:
                 self.first_item_name = json_data[0]["item_name"]            
                 self.last_item_name = json_data[-1]["item_name"]            
         except requests.exceptions.RequestException as e:  # This is the correct syntax
-            self.status_code = "Failed to Connect: " + e
+            self.status_code = "Failed to Connect: " + repr(e)
 
 class TestURLS:
     def __init__(self, urls):
