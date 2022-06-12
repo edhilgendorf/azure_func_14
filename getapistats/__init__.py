@@ -12,5 +12,5 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         get_test_data = helper_functions.TestURLS(urls)
     except Exception as e:
         logging.debug(e)
-        return func.HttpResponse("Error, see logs.", status_code=200)
+        return func.HttpResponse("Error, see logs!", status_code=200)
     return func.HttpResponse(str(get_test_data.test_data), status_code=200)
