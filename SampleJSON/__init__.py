@@ -12,7 +12,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             "item_name" : "catheadbiscuit", 
             "item_info" : "some random info", 
             "item_number" : "1"
-            "inner_dict: { "inner_item" : "inner_value" }
         },
         {
             "item_name": "dogheadtriscuit",
