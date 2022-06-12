@@ -51,6 +51,7 @@ class TestURLS:
                             "number_of_items" : thing.num_of_items, 
                             "first_item" : str(thing.first_item_name),
                             "last_item" : str(thing.last_item_name),
+                            "response_elapsed_seconds" : str(thing.elapsed.total_seconds())
 
                         } 
                 })
