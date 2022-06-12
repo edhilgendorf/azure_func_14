@@ -48,11 +48,11 @@ class TestURLS:
                 url_items.append({ 
                     url : 
                         { 
-                            "status" : thing.status_code,
-                            "number_of_items" : thing.num_of_items, 
-                            "first_item" : str(thing.first_item_name),
-                            "last_item" : str(thing.last_item_name),
-                            "response_elapsed_seconds" : str(thing.response_elapsed_seconds)
+                            "status" : str('"' + thing.status_code + '"'),
+                            "number_of_items" : str('"' + thing.num_of_items + '"'),
+                            "first_item" : str('"' + thing.first_item_name + '"'),
+                            "last_item" : str('"' + thing.last_item_name + '"'),
+                            "response_elapsed_seconds" : str('"' + thing.response_elapsed_seconds + '"'),
                         } 
                 })
             else:
