@@ -21,6 +21,7 @@ class GetURLData:
         self.full_dict = {}
         self.first_item = {}
         self.get_data_from_url()
+        print("test")
 
     def get_data_from_url(self):
         try:
