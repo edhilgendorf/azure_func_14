@@ -6,8 +6,7 @@ import azure.functions as func
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
-    return func.HttpResponse(''' 
-    [  
+    return func.HttpResponse('''[  
         {
             "item_name" : "catheadbiscuit", 
             "item_info" : "some random info", 

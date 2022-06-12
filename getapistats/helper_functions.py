@@ -30,7 +30,8 @@ class GetURLData:
                 self.full_dict = json_data        
                 self.num_of_items = len(json_data)
                 self.first_item_name = json_data[0]["item_name"]            
-                self.last_item_name = json_data[-1]["item_name"]            
+                self.last_item_name = json_data[-1]["item_name"]
+                self.response_elapsed_seconds = r.elapsed.total_seconds()
         except requests.exceptions.RequestException as e:  # This is the correct syntax
             self.status_code = "Failed to Connect: " + repr(e)
 
@@ -51,7 +52,7 @@ class TestURLS:
                             "number_of_items" : thing.num_of_items, 
                             "first_item" : str(thing.first_item_name),
                             "last_item" : str(thing.last_item_name),
-                            "response_elapsed_seconds" : str(thing.elapsed.total_seconds())
+                            "response_elapsed_seconds" : str(thing.response_elapsed_seconds)
                         } 
                 })
             else:
