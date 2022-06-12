@@ -6,6 +6,7 @@ class URLHelper:
     def __init__(self, request_object):
         self.request_object = request_object
         self.item_dict = {}
+        #print("test")
 
     def get_urls_from_request(self):
         urls = []
