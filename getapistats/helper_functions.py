@@ -28,11 +28,10 @@ class GetURLData:
             if self.status_code == 200:
                 json_data = r.json()
                 self.full_dict = json_data        
-                self.num_of_items = str(len(json_data))
+                self.num_of_items = len(json_data)
                 self.first_item_name = json_data[0]["item_name"]            
                 self.last_item_name = json_data[-1]["item_name"]
-                self.response_elapsed_seconds = str(r.elapsed.total_seconds())
-                self.status_code == str(self.status_code)
+                self.response_elapsed_seconds = r.elapsed.total_seconds()
         except requests.exceptions.RequestException as e:  # This is the correct syntax
             self.status_code = "Failed to Connect: " + repr(e)
 
@@ -49,11 +48,11 @@ class TestURLS:
                 url_items.append({ 
                     url : 
                         { 
-                            "status" : str('"' + thing.status_code + '"'),
-                            "number_of_items" : str('"' + thing.num_of_items + '"'),
-                            "first_item" : str('"' + thing.first_item_name + '"'),
-                            "last_item" : str('"' + thing.last_item_name + '"'),
-                            "response_elapsed_seconds" : str('"' + thing.response_elapsed_seconds + '"'),
+                            "status" : thing.status_code,
+                            "number_of_items" : thing.num_of_items, 
+                            "first_item" : str(thing.first_item_name),
+                            "last_item" : str(thing.last_item_name),
+                            "response_elapsed_seconds" : str(thing.response_elapsed_seconds)
                         } 
                 })
             else:
