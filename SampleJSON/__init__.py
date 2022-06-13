@@ -10,8 +10,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         {
             "item_name" : "test_one_name", 
             "item_info" : "some random info", 
-            "item_number" : "1",
-            something:something,
+            "item_number" : "1"
         },
         {
             "item_name": "test_two_name",
