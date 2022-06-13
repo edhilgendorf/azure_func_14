@@ -8,19 +8,19 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     return func.HttpResponse('''[  
         {
-            "item_name" : "catheadbiscuit", 
+            "item_name" : "test_one_name", 
             "item_info" : "some random info", 
             "item_number" : "1",
             something:something,
         },
         {
-            "item_name": "dogheadtriscuit",
+            "item_name": "test_two_name",
             "item_info" : "some other random info", 
             "item_number" : "2"
         },
         {
-            "item_name": "fishheadtriscuit",
-            "item_info" : "some fishy other random info", 
+            "item_name": "test_three_name",
+            "item_info" : "third random info", 
             "item_number" : "3"
         }
     ] 
