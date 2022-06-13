@@ -10,7 +10,11 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         reqo = helper_functions.URLHelper(req)
         urls = reqo.get_urls_from_request()
         get_test_data = helper_functions.TestURLS(urls)
+        try:
+            json_data = json.dumps(get_test_data.test_data)
+        except Exception e:
+            logging.info("Bad JSON: " + e )
     except Exception as e:
         logging.debug(e)
         return func.HttpResponse("Error, see logs!" + repr(e), status_code=200)
-    return func.HttpResponse(str(json.dumps(get_test_data.test_data)), status_code=200)
+    return func.HttpResponse(str(json_data), status_code=200)
