@@ -12,8 +12,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         get_test_data = helper_functions.TestURLS(urls)
         try:
             json_data = json.dumps(get_test_data.test_data)
-        except Exception e:
+        except Exception as e:
             logging.info("Bad JSON: " + e )
+            func.HttpResponse("Bad JSON: " + repr(e))
     except Exception as e:
         logging.debug(e)
         return func.HttpResponse("Error, see logs!" + repr(e), status_code=200)
