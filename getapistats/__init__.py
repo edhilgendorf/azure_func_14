@@ -17,4 +17,5 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     except Exception as e:
         logging.debug(e)
         return func.HttpResponse("Error, see logs" + repr(e), status_code=200)
+    logging.info(str(json_data))
     return func.HttpResponse(str(json_data), status_code=200)
