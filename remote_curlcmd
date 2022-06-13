@@ -1,3 +1,0 @@
-#curl -X POST https://eh430webapp.azurewebsites.net/api/httpexample -H 'Content-Type: application/json' -d '["https://eh430webapp.azurewebsites.net/api/samplejson"]'
-#curl -X POST https://devrexfunctioappeastus2apimonitor.azurewebsites.net/api/TestURLS -H 'Content-Type: application/json' -d '["https://eh430webapp.azurewebsites.net/api/samplejson"]'
-curl -s -X POST "https://devrexfunctionapicalls.azurewebsites.net/api/getapistats" -H 'Content-Type: application/json' -d '["https://devrexfunctionapicalls.azurewebsites.net/api/SampleJSON","https://devrexfunctionapicalls.azurewebsites.net/api/SampleJSON"]'

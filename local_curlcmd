@@ -1,3 +1,0 @@
-#curl -X POST "http://localhost:7071/api/getapistats" -H 'Content-Type: application/json' -d '["http://localhost:7071/api/SampleJSON"]'
-curl -X POST "http://localhost:7071/api/getapistats" -H 'Content-Type: application/json' -d '["https://devrexfunctionapicalls.azurewebsites.net/api/SampleJSON","https://devrexfunctionapicalls.azurewebsites.net/api/SampleJSON"]'
-
